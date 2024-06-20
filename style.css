@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:100%;
+  
+}
+body{
+    
+    
+            
+                    background-image: -webkit-repeating-linear-gradient(41deg, #082e8f 30%, #0566f7 50%);
+                    background-image: -moz-repeating-linear-gradient(41deg, #082e8f 30%, #0566f7 50%);
+                    background-image: -ms-repeating-linear-gradient(41deg, #082e8f 30%, #0566f7 50%);
+              
+            
+        
+    
+        }
+    
+      
+
+
+.dice{
+    
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+   
+}
+h1{
+    margin:30px;
+    text-shadow:5px 0 white ;
+    font-size: 6rem;
+    color: #f6b9f6;
+    text-align: center;
+}
+p{
+    font-size:2rem;
+    color: #706c18;
+    text-shadow: 1px 1px white;
+    padding-left: 8px;
+}
+button{
+    text-align:centre;
+border-style:none;
+background-color:rgba(188, 190, 187, 0.86) ;
+font-size: 30px;
+margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+img{
+    width: 70%;
+}
+.ludoimage1{
+   width:200px;
+height:200px;
+
+}
+.ludoimage2 {
+    width: 200px;
+    height: 200px;
+}

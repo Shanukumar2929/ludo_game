@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: -webkit-repeating-linear-gradient(41deg, #082e8f 30%, #0566f7 50%);
+            background-image: -moz-repeating-linear-gradient(41deg, #082e8f 30%, #0566f7 50%);
+            background-image: -ms-repeating-linear-gradient(41deg, #082e8f 30%, #0566f7 50%);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 30px;
+            text-shadow: 5px 0 white;
+            font-size: 3rem;
+            color: #f6b9f6;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #706c18;
+            text-shadow: 1px 1px white;
+            padding-left: 8px;
+        }
+
+        button {
+            border: none;
+            background-color: rgba(188, 190, 187, 0.86);
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin: 20px auto;
+            display: block;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .dice {
+            margin: 20px 0;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 5rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            button {
+                font-size: 2rem;
+            }
+
+            .ludoimage1,
+            .ludoimage2 {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JS LUDO</h1>
+        <div class="dice">
+            <p>Player 1</p>
+            <img src="photos/dice1.png" class="ludoimage1" id="check1">
+        </div>
+        <div class="dice">
+            <p>Player 2</p>
+            <img src="photos/dice6.png" class="ludoimage2" id="check2">
+        </div>
+        <button onclick="ludogame()">Click Me</button>
+    </div>
+    <script>
+        const ludogame = () => {
+            const play1 = Math.floor(Math.random() * 6) + 1;
+            const play1dice = `photos/dice${play1}.png`;
+            document.getElementById('check1').setAttribute('src', play1dice);
+
+            const play2 = Math.floor(Math.random() * 6) + 1;
+            const play2dice = `photos/dice${play2}.png`;
+            document.getElementById('check2').setAttribute('src', play2dice);
+
+            if (play1 > play2) {
+                document.querySelector('h1').innerHTML = "Player1 won";
+            } else if (play1 < play2) {
+                document.querySelector('h1').innerHTML = "Player2 won";
+            } else {
+                document.querySelector('h1').innerHTML = "Draw";
+            }
+        }
+    </script>
+</body>
+
+</html>
